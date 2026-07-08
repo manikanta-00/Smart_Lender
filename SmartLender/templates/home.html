@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Lender - Loan Eligibility Prediction</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="brand">💳 Smart Lender</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/predict">Predict</a>
+      <a href="/eda">EDA Report</a>
+      <a href="/models">Model Comparison</a>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="hero">
+      <span class="badge">Finance</span><span class="badge">Group Project</span>
+      <h1>Smart Lender</h1>
+      <p>
+        Smart Lender is a machine learning-powered web application that predicts the
+        creditworthiness of loan applicants, enabling banks and financial institutions
+        to make faster, data-driven loan approval decisions. It evaluates applicant
+        data using Decision Tree, Random Forest, K-Nearest Neighbors (KNN), and an
+        XGBoost-style Gradient Boosting classifier to determine the likelihood of
+        loan repayment or default.
+      </p>
+      <p>
+        The application processes structured applicant inputs such as gender, marital
+        status, education, employment status, income, loan amount, loan term, credit
+        history, and property area. The best-performing model is automatically
+        selected and served through this Flask-style web interface for real-time
+        prediction.
+      </p>
+      <div class="cta-row">
+        <a class="btn" href="/predict">Try a Loan Prediction &rarr;</a>
+        <a class="btn secondary" href="/models">View Model Accuracy</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0;">Usage Scenarios</h3>
+
+      <div class="scenario">
+        <h4>Scenario 1: Fast-Track Approval for Low-Risk Applicants</h4>
+        <p>A bank credit officer enters the details of a salaried applicant with a good
+           credit history and stable income. The model predicts loan approval with high
+           confidence, allowing the officer to fast-track the application without manual review.</p>
+      </div>
+
+      <div class="scenario">
+        <h4>Scenario 2: High-Risk Applicant Detection</h4>
+        <p>An applicant with irregular self-employment income and no credit history submits
+           a loan request. The system flags the application as high-risk based on the trained
+           model, prompting further scrutiny or document verification before proceeding.</p>
+      </div>
+
+      <div class="scenario">
+        <h4>Scenario 3: Batch Evaluation for High-Volume Periods</h4>
+        <p>A financial analyst uses the platform to batch-evaluate multiple applicants during
+           a high-volume period. By relying on the best-performing model's predictions, the
+           analyst significantly reduces evaluation time while maintaining accuracy and compliance.</p>
+      </div>
+    </div>
+
+    <p class="footer-note">Built with pure Python (no pip installs required) &middot; Decision Tree &middot; Random Forest &middot; KNN &middot; XGBoost-style Gradient Boosting</p>
+  </div>
+</body>
+</html>

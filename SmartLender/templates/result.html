@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Lender - Prediction Result</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="brand">💳 Smart Lender</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/predict">Predict</a>
+      <a href="/eda">EDA Report</a>
+      <a href="/models">Model Comparison</a>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="result-banner __STATUS_CLASS__">
+      <h2>__STATUS_TEXT__</h2>
+      <p>Predicted using <strong>__MODEL_NAME__</strong></p>
+      <div class="confidence-bar-track">
+        <div class="confidence-bar-fill" style="width:__CONFIDENCE__%;"></div>
+      </div>
+      <p style="margin-top:8px; color:#6b7280; font-size:13px;">Model confidence: __CONFIDENCE__%</p>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0;">Applicant Details Submitted</h3>
+      <table class="model-table">
+        __DETAILS_ROWS__
+      </table>
+      <div class="cta-row">
+        <a class="btn" href="/predict">&larr; Try Another Applicant</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

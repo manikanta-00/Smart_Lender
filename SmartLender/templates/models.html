@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Lender - Model Comparison</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="brand">💳 Smart Lender</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/predict">Predict</a>
+      <a href="/eda">EDA Report</a>
+      <a href="/models">Model Comparison</a>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h2 style="margin-top:0;">Model Comparison</h2>
+      <p style="color:#6b7280;">All four classification algorithms from the project brief were
+      trained on the same preprocessed data. The best performer on the held-out test set is
+      automatically selected to serve live predictions.</p>
+      <table class="model-table">
+        <tr><th>Model</th><th>Train Accuracy</th><th>Test Accuracy</th></tr>
+        __ROWS__
+      </table>
+    </div>
+  </div>
+</body>
+</html>

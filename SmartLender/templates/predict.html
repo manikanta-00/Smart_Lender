@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Lender - Predict Loan Eligibility</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="brand">💳 Smart Lender</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/predict">Predict</a>
+      <a href="/eda">EDA Report</a>
+      <a href="/models">Model Comparison</a>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h2 style="margin-top:0;">Loan Eligibility Prediction</h2>
+      <p style="color:#6b7280;">Enter applicant details below. Prediction is served by the
+      best-performing model: <strong>__BEST_MODEL_NAME__</strong> (test accuracy __BEST_MODEL_ACC__%).</p>
+
+      <form method="POST" action="/predict">
+        <div class="form-grid">
+          <div class="field">
+            <label>Gender</label>
+            <select name="Gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Married</label>
+            <select name="Married">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Dependents</label>
+            <select name="Dependents">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3+">3+</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Education</label>
+            <select name="Education">
+              <option value="Graduate">Graduate</option>
+              <option value="Not Graduate">Not Graduate</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Self Employed</label>
+            <select name="Self_Employed">
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Property Area</label>
+            <select name="Property_Area">
+              <option value="Urban">Urban</option>
+              <option value="Semiurban">Semiurban</option>
+              <option value="Rural">Rural</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Applicant Income (monthly)</label>
+            <input type="number" name="ApplicantIncome" value="5000" min="0" required>
+          </div>
+          <div class="field">
+            <label>Co-applicant Income (monthly)</label>
+            <input type="number" name="CoapplicantIncome" value="0" min="0" required>
+          </div>
+          <div class="field">
+            <label>Loan Amount (in thousands)</label>
+            <input type="number" name="LoanAmount" value="150" min="1" required>
+          </div>
+          <div class="field">
+            <label>Loan Amount Term (days)</label>
+            <select name="Loan_Amount_Term">
+              <option value="360">360</option>
+              <option value="300">300</option>
+              <option value="240">240</option>
+              <option value="180">180</option>
+              <option value="120">120</option>
+              <option value="84">84</option>
+              <option value="60">60</option>
+              <option value="36">36</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Credit History</label>
+            <select name="Credit_History">
+              <option value="1">Good (1)</option>
+              <option value="0">Poor / None (0)</option>
+            </select>
+          </div>
+        </div>
+        <div class="cta-row">
+          <button class="btn" type="submit">Predict Loan Eligibility</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

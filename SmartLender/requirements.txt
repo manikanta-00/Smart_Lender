@@ -1,0 +1,9 @@
+# Smart Lender requires ZERO third-party packages.
+#
+# Everything (data generation, EDA charts, Decision Tree, Random Forest,
+# KNN, and an XGBoost-style Gradient Boosting classifier, plus the web
+# server) is implemented using only Python's standard library:
+#   csv, random, math, statistics, collections, pickle, http.server,
+#   urllib.parse, os, time, sys
+#
+# You only need Python 3.8+ installed. There is nothing to `pip install`.
